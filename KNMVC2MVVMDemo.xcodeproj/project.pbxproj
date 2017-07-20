@@ -13,6 +13,8 @@
 		E1E074471F20B070004BD5A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E074451F20B070004BD5A1 /* Main.storyboard */; };
 		E1E074491F20B070004BD5A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E074481F20B070004BD5A1 /* Assets.xcassets */; };
 		E1E0744C1F20B070004BD5A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E0744A1F20B070004BD5A1 /* LaunchScreen.storyboard */; };
+		E1E074561F20B270004BD5A1 /* KNPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E074551F20B270004BD5A1 /* KNPerson.m */; };
+		E1E0745B1F20B419004BD5A1 /* KNPersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E0745A1F20B419004BD5A1 /* KNPersonViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E1E074481F20B070004BD5A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E0744B1F20B070004BD5A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1E0744D1F20B070004BD5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E074541F20B270004BD5A1 /* KNPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNPerson.h; sourceTree = "<group>"; };
+		E1E074551F20B270004BD5A1 /* KNPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNPerson.m; sourceTree = "<group>"; };
+		E1E074591F20B419004BD5A1 /* KNPersonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNPersonViewModel.h; sourceTree = "<group>"; };
+		E1E0745A1F20B419004BD5A1 /* KNPersonViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNPersonViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +64,9 @@
 		E1E0743B1F20B070004BD5A1 /* KNMVC2MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E1E0743F1F20B070004BD5A1 /* AppDelegate.h */,
-				E1E074401F20B070004BD5A1 /* AppDelegate.m */,
-				E1E074421F20B070004BD5A1 /* ViewController.h */,
-				E1E074431F20B070004BD5A1 /* ViewController.m */,
-				E1E074451F20B070004BD5A1 /* Main.storyboard */,
-				E1E074481F20B070004BD5A1 /* Assets.xcassets */,
-				E1E0744A1F20B070004BD5A1 /* LaunchScreen.storyboard */,
-				E1E0744D1F20B070004BD5A1 /* Info.plist */,
+				E1E074581F20B351004BD5A1 /* VM  */,
+				E1E074571F20B33D004BD5A1 /* Modal */,
+				E1E074531F20B0B2004BD5A1 /* VC */,
 				E1E0743C1F20B070004BD5A1 /* Supporting Files */,
 			);
 			path = KNMVC2MVVMDemo;
@@ -74,9 +75,42 @@
 		E1E0743C1F20B070004BD5A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1E074481F20B070004BD5A1 /* Assets.xcassets */,
+				E1E0744A1F20B070004BD5A1 /* LaunchScreen.storyboard */,
+				E1E0744D1F20B070004BD5A1 /* Info.plist */,
+				E1E0743F1F20B070004BD5A1 /* AppDelegate.h */,
+				E1E074401F20B070004BD5A1 /* AppDelegate.m */,
 				E1E0743D1F20B070004BD5A1 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1E074531F20B0B2004BD5A1 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				E1E074451F20B070004BD5A1 /* Main.storyboard */,
+				E1E074421F20B070004BD5A1 /* ViewController.h */,
+				E1E074431F20B070004BD5A1 /* ViewController.m */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		E1E074571F20B33D004BD5A1 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				E1E074541F20B270004BD5A1 /* KNPerson.h */,
+				E1E074551F20B270004BD5A1 /* KNPerson.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		E1E074581F20B351004BD5A1 /* VM  */ = {
+			isa = PBXGroup;
+			children = (
+				E1E074591F20B419004BD5A1 /* KNPersonViewModel.h */,
+				E1E0745A1F20B419004BD5A1 /* KNPersonViewModel.m */,
+			);
+			name = "VM ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +139,7 @@
 		E1E074311F20B070004BD5A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KN;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = hisun;
 				TargetAttributes = {
@@ -152,6 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E074441F20B070004BD5A1 /* ViewController.m in Sources */,
+				E1E074561F20B270004BD5A1 /* KNPerson.m in Sources */,
+				E1E0745B1F20B419004BD5A1 /* KNPersonViewModel.m in Sources */,
 				E1E074411F20B070004BD5A1 /* AppDelegate.m in Sources */,
 				E1E0743E1F20B070004BD5A1 /* main.m in Sources */,
 			);
