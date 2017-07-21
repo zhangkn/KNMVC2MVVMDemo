@@ -11,6 +11,9 @@
 @interface ViewController ()
 
 @property (nonatomic,strong) KNPerson *model;
+
+@property (nonatomic,strong) KNPersonViewModel *viewModel;
+
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *birthdateLabel;
 
@@ -22,15 +25,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self dataSource];
-    [self testMVC];
+//    [self testMVC];
+    [self testMVVM];
+
 }
 
 - (void)dataSource{
     
     self.model = [[KNPerson alloc]initWithSalutation:@"kevin" firstName:@"kn" lastName:@"zhang" birthdate:[NSDate date]];
+    self.viewModel = [[KNPersonViewModel alloc]initWithPerson:self.model];
     
 }
 
+
+/**
+ 将 ViewController 中的展示逻辑testMVC抽取到这个 PersonViewModel 中
+ 最终，ViewController 将会变得非常轻量级：
+ */
+- (void)testMVVM{
+    self.nameLabel.text = self.viewModel.nameText;
+    self.birthdateLabel.text = self.viewModel.birthdateText;
+}
 
 /**
  将 Person 中的属性进行一定的转换后，赋值给相应的 view 进行展示
