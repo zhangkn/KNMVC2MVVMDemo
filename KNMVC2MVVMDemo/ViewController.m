@@ -21,6 +21,14 @@
 
 @implementation ViewController
 
+/**
+ 那 MVVM 相比 MVC 到底有哪些好处呢？主要可以归纳为以下三点：
+ 
+ 1、由于展示逻辑被抽取到了 viewModel 中，所以 view 中的代码将会变得非常轻量级；
+ 2、由于 viewModel 中的代码是与 UI 无关的，所以它具有良好的可测试性；
+ 3、对于一个封装了大量业务逻辑的 model 来说，改变它可能会比较困难，并且存在一定的风险。在这种场景下，viewModel 可以作为 model 的适配器使用，从而避免对 model 进行较大的改动。
+
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
